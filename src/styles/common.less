@@ -1,0 +1,102 @@
+@import 'lib/include.all.less';
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: initial;
+	text-decoration: none !important;
+	outline: none !important;
+}
+
+a:focus, a:hover {
+	color: initial;
+}
+
+
+body {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1140px;
+	width: 90%;
+	color: @color-black;
+	font-family: "Rubik", "Helvetica Neue", sans-serif, "Alegreya",serif,"돋움";
+}
+
+header {
+	margin-top: 60px;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+@header-bottom-margin: 30px;
+
+.site-name {
+	margin-bottom: @header-bottom-margin;
+}
+
+.home-btn {
+	cursor: pointer;
+}
+
+.home-btn.active {
+	display: none;
+}
+
+.admin-info {
+	position: absolute;
+	bottom: @header-bottom-margin;
+	right: 0px;
+}
+
+.loading-bar {
+	width: 100%;
+	height: 6px;
+	background-color: @color-black;
+}
+
+.category>ul>li {
+	display: inline-block;
+	color: @color-gray;
+	cursor: pointer;
+}
+
+.category>ul>li.active {
+	color: @color-black;
+	font-weight: bold;
+}
+
+
+.category>ul>li:after {
+	content: '/';
+	padding-right: 15px;
+	padding-left: 15px;
+	font-weight: normal !important;
+}
+
+.category>ul>li:last-child:after {
+	content: '';
+}
+
+
+// 반응형 (아이패드)
+@media screen and (max-width: 768px) {
+	header {
+		padding-top: 30px;
+	}
+
+}
+
+// 반응형 (아이폰 6 plus 이하)
+@media screen and (max-width: 414px) {
+	.site-name {
+
+	}
+
+	.site-url {
+
+	}
+}
