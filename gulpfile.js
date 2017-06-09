@@ -99,6 +99,7 @@ gulp.task('copy', [
     'copy:clipboard',
     'copy:license',
     'copy:img',
+	'copy:fonts',
     'copy:misc'
 ]);
 
@@ -167,6 +168,11 @@ gulp.task('copy:license', function () {
 gulp.task('copy:img', function () {
     return gulp.src(dirs.src + '/img/**/*')
         .pipe(gulp.dest(dirs.dist + "/img"));
+});
+
+gulp.task('copy:fonts', function () {
+	return gulp.src(dirs.src + '/fonts/**/*')
+		.pipe(gulp.dest(dirs.dist + "/fonts"));
 });
 
 gulp.task('copy:misc', function () {

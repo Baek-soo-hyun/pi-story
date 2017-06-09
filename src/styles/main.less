@@ -1,2 +1,51 @@
 @import 'lib/include.all.less';
 @import 'common.css';
+
+.content-body>ul>li {
+	display: inline-block;
+	margin-right: 28px;
+	margin-bottom: 28px;
+	width: 448px;
+	height: 316px;
+	cursor: pointer;
+}
+
+.content-body>ul>li:nth-child(3n) {
+	margin-right: 0;
+}
+
+.img-box {
+	position: relative;
+}
+
+.img-box>img {
+	width: 100%;
+}
+
+.img-box>.dark-layer {
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.8);
+	color: #ffffff;
+	text-align: center;
+	z-index: 1;
+}
+
+.description-box {
+	width: 100%;
+	@abs-center();
+}
+
+.dark-layer .title {
+	padding-bottom: 10px;
+	font-size: 24px;
+	font-family: "Roboto";
+}
+
+.dark-layer .description {
+	font-size: 15px;
+	font-family: "맑은 고딕";
+}
