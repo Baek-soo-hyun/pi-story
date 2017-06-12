@@ -16,6 +16,9 @@ a:focus, a:hover {
 	color: initial;
 }
 
+body {
+	position: relative;
+}
 
 header,
 section.category,
@@ -23,7 +26,7 @@ section.category,
 	position: relative;
 	margin: 0 auto;
 	max-width: 1400px;
-	width: 90%;
+	width: 100%;
 	color: @color-black;
 	font-family: "Roboto", "맑은 고딕";
 }
@@ -93,13 +96,13 @@ header {
 
 
 // ----------footer---------- //
-@footer-heigt: 90px;
+@footer-height: 90px;
 
 footer {
 	position: relative;
 	margin-top: 170px;
 	width: 100%;
-	height: @footer-heigt;
+	height: @footer-height;
 	color: #ffffff;
 	font-size: 14px;
 	background-color: @color-black;
@@ -107,7 +110,7 @@ footer {
 }
 
 footer>.copy-right {
-	line-height: @footer-heigt;
+	line-height: @footer-height;
 }
 
 

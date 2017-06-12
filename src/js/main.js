@@ -1,24 +1,29 @@
 require([
 	"common",
 ], function() {
+	var preProjectId = "";
+	var nextProjectId = "";
+
 	// 메인 썸네일 hover event
 	$(".main-thumbnail>ul>.img-box").on({
 		"mouseenter": function() {
 			var selector = $(this);
 			var darkLayer = selector.children(".dark-layer");
-			darkLayer.fadeIn();
+			darkLayer.fadeIn(350);
 		},
 		"mouseleave": function() {
 			var selector = $(this);
 			var darkLayer = selector.children(".dark-layer");
-			darkLayer.fadeOut();
+			darkLayer.fadeOut(200);
 		},
 	});
 
 	// 메인 썸네일 click event
 	$(".main-thumbnail>ul>.img-box").on("click", function() {
 		var projectId = $(this).attr("project_id");
-		$(".project-layer").css("display", "block");
+		$(".main-content-body>.category").css("display", "none");
+		$(".main-content-body>.main-thumbnail").css("display", "none");
+		$(".main-content-body>.project-layer").css("display", "block");
 		loadProjectInfo(projectId);
 	});
 
@@ -27,6 +32,8 @@ require([
 		$(".project-layer .close-area>img.default").css("display", "none");
 		$(".project-layer .close-area>img.active").css("display", "block");
 		$(".project-layer").css("display", "none");
+		$(".main-content-body>.category").css("display", "block");
+		$(".main-content-body>.main-thumbnail").css("display", "block");
 		$(".project-layer .close-area>img.default").css("display", "block");
 		$(".project-layer .close-area>img.active").css("display", "none");
 	});
@@ -37,7 +44,7 @@ require([
 		var about = "";
 		var img = "";
 
-		if(projectId === "06") {
+		if(projectId === "6") {
 			project = "뷰티인미 모바일 앱 (실무)";
 			work = "뷰티모바일 앱 (BANNER+PAGE)운영<br>뷰티모바일 앱 (PICK 엠블럼) 제작";
 			about = "뷰티인미 모바일앱 (배너와 페이지)운영을 통해 고화질 이미지 선택과 제품 이미지를 독보이게 하는"
@@ -57,17 +64,17 @@ require([
 	}
 
 	function paging(projectId) {
-		var preProjectId = projectId - 1;
-		var nextProjectId = projectId + 1;
+		preProjectId = projectId - 1;
+		nextProjectId = parseInt(projectId) + 1;
 
 		console.log(preProjectId);
 		console.log(nextProjectId);
 
-		$(".project-layer>.paging-area>.pre").on("click", function(preProjectId) {
+		$(".project-layer>.paging-area>.pre").on("click", function() {
 
 		});
 
-		$(".project-layer>.paging-area>.next").on("click", function(nextProjectId) {
+		$(".project-layer>.paging-area>.next").on("click", function() {
 
 		});
 	};

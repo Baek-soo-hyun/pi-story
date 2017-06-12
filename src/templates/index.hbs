@@ -2,27 +2,26 @@
 {{set pageId="main"}}
 {{>header title="Pi-story" cssName="main"}}
 
-<section class="category">
-	<ul>
-		<li class="category active" value="all">
-			All
-		</li>
-		<li class="category" value="web">
-			Web
-		</li>
-		<li class="category" value="ad">
-			Ad
-		</li>
-		<li class="category" value="ect">
-			Ect
-		</li>
-	</ul>
-</section>
-
 <section class="main-content-body">
+	<section class="category">
+		<ul>
+			<li class="category active" value="all">
+				All
+			</li>
+			<li class="category" value="web">
+				Web
+			</li>
+			<li class="category" value="ad">
+				Ad
+			</li>
+			<li class="category" value="ect">
+				Ect
+			</li>
+		</ul>
+	</section>
 	<section class="main-thumbnail">
 		<ul>
-			<li class="img-box" project_id="01">
+			<li class="img-box" project_id="1" category="web">
 				<img src="{{root}}/img/2017_노스페이스_01.jpg">
 				<div class="dark-layer">
 					<div class="description-box">
@@ -35,7 +34,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="img-box" project_id="02">
+			<li class="img-box" project_id="2" category="web">
 				<img src="{{root}}/img/2017_올푸페_01.jpg">
 				<div class="dark-layer">
 					<div class="description-box">
@@ -48,7 +47,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="img-box" project_id="03">
+			<li class="img-box" project_id="3" category="web">
 				<img src="{{root}}/img/2017_open_01.jpg">
 				<div class="dark-layer">
 					<div class="description-box">
@@ -61,7 +60,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="img-box" project_id="04">
+			<li class="img-box" project_id="4" category="web">
 				<img src="{{root}}/img/2016_tvN_festival_main.jpg">
 				<div class="dark-layer">
 					<div class="description-box">
@@ -74,7 +73,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="img-box" project_id="05">
+			<li class="img-box" project_id="5" category="web">
 				<img src="{{root}}/img/2016_tvN_main_home_02.jpg">
 				<div class="dark-layer">
 					<div class="description-box">
@@ -87,7 +86,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="img-box" project_id="06">
+			<li class="img-box" project_id="6" category="ad ect">
 				<img src="{{root}}/img/2016_beauty_in_me_00.jpg">
 				<div class="dark-layer">
 					<div class="description-box">
@@ -100,7 +99,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="img-box" project_id="07">
+			<li class="img-box" project_id="7"category="ad">
 				<img src="{{root}}/img/2014_line_sweets_00.jpg">
 				<div class="dark-layer">
 					<div class="description-box">
@@ -113,7 +112,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="img-box" project_id="08">
+			<li class="img-box" project_id="8" category="ad">
 				<img src="{{root}}/img/2014_god_of_war_00.jpg">
 				<div class="dark-layer">
 					<div class="description-box">
@@ -126,7 +125,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="img-box" project_id="09">
+			<li class="img-box" project_id="9" category="ad">
 				<img src="{{root}}/img/2014_elsword_01.jpg">
 				<div class="dark-layer">
 					<div class="description-box">
@@ -156,6 +155,7 @@
 
 					</div>
 				</li>
+				<div class="divider"></div>
 				<li label="work">
 					<div class="label-name" label="work">
 						WORK
@@ -164,6 +164,7 @@
 
 					</div>
 				</li>
+				<div class="divider"></div>
 				<li label="about">
 					<div class="label-name" label="about">
 						ABOUT PROJECT

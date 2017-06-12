@@ -54,6 +54,68 @@
 
 
 // ----------project layer---------- //
+
+@project-layer-padding: 45px;
+
 .project-layer {
+	display: none;
+	position: relative;
+	padding-top: @project-layer-padding;
+	width: 100%;
+	background-color: #ffffff;
+	z-index: 10;
+}
+
+.close-area {
+	text-align: right !important;
+}
+
+.close-area>img {
+	cursor: pointer;
+}
+
+.close-area>img.active {
+	display: none;
+}
+
+.project-layer>.text-area {
+	padding-bottom: @project-layer-padding;
+}
+
+@text-area-line-heihgt: 25px;
+
+.project-layer>.text-area>ul>li {
+	display: inline-block;
+	padding: 0 40px;
+	line-height: @text-area-line-heihgt;
+	vertical-align: top;
+}
+
+.project-layer>.text-area>ul>li:first-child {
+	padding-left: 0;
+}
+
+.project-layer>.text-area>ul>li:last-child {
+	padding-right: 0;
+}
+
+.project-layer>.text-area>ul>.divider {
+	display: inline-block;
+	margin-top: @text-area-line-heihgt;
+	padding-top: 30px;
+	padding-right: 1px;
+	background-color: @color-line;
+	vertical-align: middle;
+}
+
+.project-layer>.text-area .label-name {
+	font-weight: bold;
+}
+
+.project-layer>.img-area>img {
+	margin-bottom: 50px;
+}
+
+.project-layer>.paging-area> img.active {
 	display: none;
 }
