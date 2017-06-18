@@ -14,5 +14,12 @@ define([
 		var category = $(this).attr("value");
 		$(".category>ul>li").removeClass("active");
 		$(".category>ul>li[value=" + category + "]").addClass("active");
+		$(".main-thumbnail>ul>li").css("display", "none");
+		if (category === "all") {
+			$(".main-thumbnail>ul>li").css("display", "inline-block");
+		}
+		else {
+			$(".main-thumbnail>ul>li[category=" + category + "]").css("display", "inline-block");
+		}
 	});
 });

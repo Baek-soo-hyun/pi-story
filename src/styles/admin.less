@@ -2,85 +2,42 @@
 @import 'common.css';
 
 
-section.admin-add,
-section.admin-update {
-	display: none;
+section.login {
+	position: relative;
+	margin-top: 100px;
 }
 
-.admin-menu {
-	margin: 30px 0px;
+@input-height: 40px;
+
+.login>.input-area {
+	margin: auto;
+	width: 50%;
 }
 
-.menu {
-	margin: 50px 0px;
+.login>.input-area>input {
+	width: 100%;
+	height: @input-height;
+	margin-bottom: 20px;
+	padding: 0px 20px;
+	border: solid 1px @color-black;
 }
 
-@admin-menu-padding: 20px;
-
-.admin-menu>ul>li {
-	display: inline-block;
-	padding-right: @admin-menu-padding;
-	line-height: 100%;
-	cursor: pointer;
+.login>.input-area>input:focus {
+	border: solid 1px @color-main;
 }
 
-.admin-menu>ul>li.active {
-	color: @color-main;
+.login>.btn-login {
+	width: 50%;
+	height: @input-height + 2px;
+	font-size: 16px;
 	font-weight: bold;
-}
-
-.admin-menu>ul>li:last-child {
-	padding-right: 0px;
-	padding-left: @admin-menu-padding;
-	border-left: solid 1px @color-black;
-}
-
-.form-group {
-	margin-top: 20px;
-}
-
-
-/*-----table area-----*/
-.table th,
-.table td {
-	text-align: center;
-	border: solid 1px @color-gray !important;
-	@text-overflow();
-}
-
-.table th:first-child {
-	width: 13%;
-}
-
-.table th:last-child {
-	width: 42%
-}
-
-
-/*-----btn area-----*/
-.pi-btn {
-	float: right;
-	margin: 30px 0 30px 20px;
-	padding: 10px 30px;
-	width: 150px;
-	text-align: center;
-	border: solid 3px @color-black;
-	cursor: pointer;
-}
-
-.pi-btn.active {
-	border: solid 3px @color-main;
-}
-
-.btn-admin-cancel {
 	color: #ffffff;
-	background-color: @color-black !important;
+	background-color: @color-black;
+	border: solid 1px @color-black;
+	@abs-hcenter();
 }
 
-.admin-buttons{
-	margin-top: 30px;
-}
-
-.admin-buttons>div:last-child {
-	margin-right: 0px;
+.login>.btn-login:focus {
+	background-color: @color-main;
+	border: solid 1px @color-main;
 }

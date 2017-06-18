@@ -2,75 +2,12 @@
 {{set pageId="admin"}}
 {{>header title="Pi-story-Admin" cssName="admin"}}
 
-<section class="admin-body">
-	<div class="admin-menu">
-		<ul>
-			<li class="active" admin-menu="category">
-				category
-			</li>
-			<li admin-menu="project">
-				project
-			</li>
-		</ul>
+<section class="login">
+	<div class="input-area">
+		<input id="member-id" type="text" placeholder="ID">
+		<input id="member-pw" type="password" placeholder="Password">
 	</div>
-
-	<section class="menu" admin-menu="category">
-		<section class="admin-list">
-			<table class="table table-hover table-condensed">
-				<thead>
-				<tr>
-					<th>No</th>
-					<th>Category ID</th>
-					<th>Category Name</th>
-				</tr>
-				</thead>
-				<tbody>
-
-				</tbody>
-			</table>
-			<ul class="paging">
-			</ul>
-			<section class="pi-btn add">
-				Add
-			</section>
-		</section>
-		<section class="admin-add">
-			<div class="form-group">
-				<label for="add-category_name">Category Name</label>
-				<input type="text" class="form-control" id="add-category_name" placeholder="Category Name">
-			</div>
-			<div class="form-group">
-				<label for="input-password">Password</label>
-				<input type="password" class="form-control" id="input-password" placeholder="password">
-			</div>
-			<div class="admin-buttons">
-				<div class="half pi-btn btn-admin-save">저장</div>
-				<div class="half pi-btn btn-admin-cancel">취소</div>
-			</div>
-		</section>
-		<section class="admin-update">
-			<div class="form-group">
-				<label for="upt-category_id">Category ID</label>
-				<input type="text" class="form-control" id="upt-category_id" disabled>
-			</div>
-			<div class="form-group">
-				<label for="upt-category_name">Category Name</label>
-				<input type="text" class="form-control" id="upt-category_name" placeholder="Category Name">
-			</div>
-			<div class="form-group">
-				<label for="input-password">Password</label>
-				<input type="password" class="form-control" id="input-password" placeholder="password">
-			</div>
-			<div class="admin-buttons">
-				<div class="btn-admin-update triple pi-btn">수정</div>
-				<div class="btn-admin-delete triple pi-btn">삭제</div>
-				<div class="btn-admin-cancel triple pi-btn">취소</div>
-			</div>
-		</section>
-	</section>
-
-	<section class="menu" admin-menu="project">
-	</section>
+	<button class="btn-login">Log In</button>
 </section>
 
 {{>footer jsName="admin"}}

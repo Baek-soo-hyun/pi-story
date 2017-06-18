@@ -216,35 +216,36 @@ gulp.task('html:static', function() {
         .pipe(gulp.dest(dirs.dist));
 });
 
+
 gulp.task('html:dynamic', function() {
-    var options = {
-        batch: [dirs.src + '/templates/partials'],
+	var options = {
+		batch: [dirs.src + '/templates/partials'],
 		helpers: {
-        	set: function(options) {
-        		for (var attr in options.hash) {
-        			this[attr] = options[attr];
+			set: function(options) {
+				for (var attr in options.hash) {
+					this[attr] = options.hash[attr];
 				}
 			},
 			eq: function(left, right) {
 				return left === right;
 			}
 		}
-    };
+	};
 
-    return gulp.src([dirs.src + '/templates/**/*.hbs',
-        '!' + dirs.src + '/templates/partials/**/*.hbs',
-        '!' + dirs.src + '/templates/template.hbs'])
-        .pipe(handlebars(hbsGlobalConfig, options))
-        .pipe(plugins.rename(function(path) {
-            path.extname = '.html';
-        }))
-        .pipe(htmlmin({
-            collapseWhitespace: true,
+	return gulp.src([dirs.src + '/templates/**/*.hbs',
+		'!' + dirs.src + '/templates/partials/**/*.hbs',
+		'!' + dirs.src + '/templates/template.hbs'])
+		.pipe(handlebars(hbsGlobalConfig, options))
+		.pipe(plugins.rename(function(path) {
+			path.extname = '.html';
+		}))
+		.pipe(htmlmin({
+			collapseWhitespace: true,
 			minifyCSS: true,
 			minifyJS: true,
-            removeComments: true
-        }))
-        .pipe(gulp.dest(dirs.dist));
+			removeComments: true
+		}))
+		.pipe(gulp.dest(dirs.dist));
 });
 
 gulp.task('css', function () {
